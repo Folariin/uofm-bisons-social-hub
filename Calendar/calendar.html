@@ -67,7 +67,7 @@
             <h3>Menu</h3>
             <ul>
                 <a href="index.html"><img src="icon.png" />Home</a>
-                <a href="#calendar"><img src="calendar.png" />Calendar</a>
+                <a href="#calendar.html"><img src="calendar.png" />Calendar</a>
                 <a href="#clubs"><img src="clubs.png" />Clubs and Orgs</a>
                 <a href="#contact"><img src="events.png" />Social Events</a>
             </ul>
@@ -85,6 +85,28 @@
                 initialView: 'dayGridMonth',
                 height: '100%',
             });
+            calendar.render();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendarEl = document.getElementById('calendar');
+
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                events: [
+                    {
+                        title: 'Monday Night Hired',
+                        start: '2025-11-10',
+                        url: 'event.html'
+                    },
+                    {
+                        title: 'Monday Night Hired',
+                        start: '2025-11-17',
+                        end: '2025-11-17',
+                        url: 'event.html'
+                    }
+                ]
+            });
+
             calendar.render();
         });
     </script>
