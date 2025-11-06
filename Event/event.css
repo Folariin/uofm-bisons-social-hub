@@ -1,0 +1,149 @@
+:root{
+  --ink:#111;
+  --bg:#fff;
+  --nav-bg:#250d09;
+  --border:#000;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:"Poppins", Arial, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+}
+
+/* === LEFT NAV === */
+nav{
+  position:fixed;
+  inset:0 auto 0 0;          /* top:0; right:auto; bottom:0; left:0 */
+  width:90px;
+  background:var(--nav-bg);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  z-index:100;
+  padding-top:12px;
+}
+
+nav a.logo img{
+  width:60px;                 /* don’t overfill the column */
+  height:auto;
+  margin:8px 0 16px;
+}
+
+nav .itemScroll{
+  width:100%;
+  overflow-y:auto;
+  scrollbar-width:thin;      
+}
+
+nav .itemScroll a{
+  display:block;
+  text-decoration:none;
+  color:#fff;
+  text-align:center;
+  padding:12px 6px;
+  font-size:12px;
+  line-height:1.1;
+  transition:transform .2s, background-color .2s;
+}
+
+nav .itemScroll a:hover{
+  background:#3a221e;
+  transform:translateY(-2px);
+}
+
+nav .itemScroll a img{
+  display:block;
+  width:30px;
+  height:30px;
+  margin:0 auto 6px;
+}
+
+.event-image-box{
+  aspect-ratio: 4 / 3;     /* always 4:3, no jumping */
+  max-width: 360px;
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.event-image-box img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;       /* crop edges nicely */
+}
+
+
+.event-content{
+  /* make room for fixed nav */
+  margin-left:90px;
+  padding:40px 32px;
+  min-height:100vh;
+}
+
+.event-header{
+  display:grid;
+  grid-template-columns: min(34vw, 360px) 1fr; /* responsive left column */
+  gap: 2.5rem;
+  align-items: center;
+}
+
+
+
+.event-info h2{
+  margin:0 0 8px 0;
+}
+
+.event-info p{
+  margin:6px 0;
+  font-size:1rem;
+}
+
+.event-description,
+.event-host{
+  margin-top:24px;
+}
+
+.event-description h3,
+.event-host h3{
+  margin:0 0 8px 0;
+}
+
+.event-description{
+  max-width: 65ch;          /* ~65 characters per line = comfy */
+  margin-top: 28px;
+}
+
+.event-description p{
+  font-size: 1.06rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 10px 0 0;
+}
+
+.host-tags{
+  display:flex;
+  gap:10px;
+  margin-top:6px;
+}
+
+.tag{
+  border:2px solid var(--border);
+  padding:6px 12px;
+  font-weight:700;
+  border-radius:4px;
+}
+
+/* === makes it work on a phone === */
+@media (max-width:640px){
+  nav{ width:70px; }
+  .event-content{ margin-left:70px; padding:28px 20px; }
+  nav .itemScroll a img{ width:28px; height:28px; }
+  nav .itemScroll a{ font-size:11px; padding:10px 4px; }
+}
