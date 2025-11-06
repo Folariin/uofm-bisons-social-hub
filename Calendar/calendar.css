@@ -1,87 +1,178 @@
-:root {
-  --font: Arial, sans-serif;
-}
+ body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+ }
 
-/* This styles the whole page background and text */
-html,
-body {
-  font-family: Arial, sans-serif;
-  background-color: #ffad00;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  min-width: 1000px;
-}
+ /* Header */
+ header {
+   background-color: #4A90E2;
+   color: white;
+   padding: 1rem;
+   text-align: center;
+   font-size: 1.5rem;
+ }
+
+ /* Main container below header */
+ .main {
+   flex: 1;
+   display: flex;
+   /* adjust based on header height */
+ }
+
+ /* Left panel */
+ .sidebar {
+   width: 150px;
+   background-color: #459EC8;
+   padding: 1rem;
+   border-right: 1px solid #ddd;
+   box-sizing: border-box;
+ }
+
+ /* Calendar area */
+ .calendar-container {
+   flex: 1;
+   padding: 1rem;
+   box-sizing: border-box;
+ }
+
+ #calendar {
+   height: 100%;
+ }
+
+ :root {
+   --font: Arial, sans-serif;
+ }
+
+ /* This styles the whole page background and text */
+ html,
+ body {
+   font-family: Arial, sans-serif;
+   /*background-color: #ffad00;*/
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   min-width: 1000px;
+ }
 
 
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 90px;
-  background-color: #250d09;
-  display: flex;
-  flex-direction: column;
-  /* Arrange items vertically */
-  align-items: center;
-  /* Center items horizontally */
-  z-index: 100;
-  /* Ensure it's always on top */
-}
+ nav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 90px;
+   background-color: #250d09;
+   display: flex;
+   flex-direction: column;
+   /* Arrange items vertically */
+   align-items: center;
+   /* Center items horizontally */
+   z-index: 100;
+   /* Ensure it's always on top */
+ }
 
-nav div.itemScroll {
-  width: 100%;
-  overflow-y: auto;
-  /* Enables vertical scroll if needed */
-  scrollbar-width: thin;
-  /* For Firefox */
-}
+ nav div.itemScroll {
+   width: 100%;
+   overflow-y: auto;
+   /* Enables vertical scroll if needed */
+   scrollbar-width: thin;
+   /* For Firefox */
+ }
 
-/* Style for the image*/
-nav a.logo img {
-  margin-bottom: 40%;
-  margin-left: 22%;
-  width: 60%;
-}
+ /* Style for the image*/
+ nav a.logo img {
+   margin-bottom: 40%;
+   margin-left: 22%;
+   width: 60%;
+ }
 
-/* Style for the links inside the navbar */
-nav div.itemScroll a {
-  text-decoration: none;
-  font-size: smaller;
-  color: white;
-  padding: 10px 20px;
-  margin: 5% 0;
-  /* Add space between the links */
-  display: block;
-  /* Make the link fill the width */
-  transition: 0.2s;
-  /* Smooth hover effect */
-  text-align: center;
-}
+ /* Style for the links inside the navbar */
+ nav div.itemScroll a {
+   text-decoration: none;
+   font-size: smaller;
+   color: white;
+   padding: 10px 20px;
+   margin: 5% 0;
+   /* Add space between the links */
+   display: block;
+   /* Make the link fill the width */
+   transition: 0.2s;
+   /* Smooth hover effect */
+   text-align: center;
+ }
 
-/* Change color when hovering over a link */
-nav div.itemScroll a:hover {
-  background-color: #555;
-  transform: translateY(-3px);
-}
+ /* Change color when hovering over a link */
+ nav div.itemScroll a:hover {
+   background-color: #555;
+   transform: translateY(-3px);
+ }
 
-nav div.itemScroll img {
-  display: block;
-  width: 100%;
-}
+ nav div.itemScroll img {
+   display: block;
+   width: 100%;
+ }
 
-h1,
-h2,
-h3 {
-  font-weight: bold;
-  color: black;
-  padding: 0;
-  margin-left: 8%;
-}
+ /*
+ my stuff is above, mostafas is below
+ sorry im still figuring all this out*/
 
-.p {
-  margin-left: 8%;
-}
+ h1,
+ h2,
+ h3 {
+   font-weight: bold;
+   color: black;
+   padding: 0;
+   margin-left: 8%;
+ }
 
-h1 {}
+ .p {
+   margin-left: 8%;
+ }
+
+ body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+ }
+
+ /* Header */
+ header {
+   background-color: #4A90E2;
+   color: white;
+   padding: 1rem;
+   text-align: center;
+   font-size: 1.5rem;
+ }
+
+ /* Main container below header */
+ .main {
+   flex: 1;
+   display: flex;
+   /*height: calc(100vh - 70px);*/
+   /* adjust based on header height */
+ }
+
+ /* Left panel */
+ .sidebar {
+   width: 150px;
+   background-color: #459EC8;
+   padding: 1rem;
+   border-right: 1px solid #ddd;
+   box-sizing: border-box;
+ }
+
+ /* Calendar area */
+ .calendar-container {
+   flex: 1;
+   padding: 1rem;
+   box-sizing: border-box;
+ }
+
+ #calendar {
+   height: 100%;
+ }
