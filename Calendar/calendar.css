@@ -179,3 +179,37 @@
    width: 60px;
    height: 60px;
  }
+
+
+
+ /* Filter function stuff below */
+
+ .filter-container {
+   margin-bottom: 15px;
+ }
+
+ 
+/* Optional: hover effect to match FullCalendar buttons */
+/* .fc-filter-dropdown:hover {
+  background-color: #f0f0f0;
+} */
+
+
+/* The visible part of the select (the "button") */
+.fc-filter-dropdown {
+  border: transparent;
+  background-color: transparent;  /* dark toolbar background */
+  color: white;            /* text on the button is white */
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 2px 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* The dropdown options */
+.fc-filter-dropdown option {
+  background-color: whtite;  /* dropdown background */
+  color: black;             /* dropdown text */
+  padding: 2px 5px;
+}
