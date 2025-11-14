@@ -22,20 +22,48 @@
   </nav>
   <!-- Main content -->
   <main class="event-content">
-    <section class="event-header">
+    <section class="section event-header">
       <div class="event-image-box">
         <img src="career-fair.jpg" alt="Students networking with companies at a career fair">
       </div>
 
       <div class="event-info">
         <h2>Monday Night H.I.R.E.D</h2>
-        <p>📅 <strong>October 20, 2025</strong>, from 5:30–6:30 PM</p>
-        <p>📍 <strong>E2-110 EITC</strong></p>
+
+        <!-- Date & Time row -->
+        <div class="detail">
+          <img class="icon" src="calendar-bw.png" alt="">
+          <div>
+            <h4>Date and Time</h4>
+            <p id="when-line-1">Sunday, November 9 2025 at 7:00 PM EST</p>
+            <p id="when-line-2">Sunday, November 9 2025 at 10:00 PM EST</p>
+
+            <div class="add-to">
+              Add to
+              <a class="add-to-gcal add-link" target="_blank" rel="noopener">Google Calendar</a>
+              |
+              <a class="add-to-ics add-link" download="Monday_Night_HIRED.ics">iCal/Outlook</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location row -->
+        <div class="detail">
+          <img class="icon" src="location.png" alt="">
+          <div>
+            <h4>Location</h4>
+            <p>
+              <a href="https://www.google.com/maps?q=E2-110+EITC,+University+of+Manitoba" target="_blank"
+                rel="noopener">E2-110 EITC</a>
+            </p>
+          </div>
+        </div>
       </div>
+
     </section>
 
-    <section class="event-description">
-      <h3>Description</h3>
+    <section class="section event-description">
+      <h2>Description</h2>
       <p>
         Smith and Anderson is a leading Canadian consulting engineering firm
         specializing in mechanical, electrical, and building systems design.
@@ -43,14 +71,35 @@
       </p>
     </section>
 
-    <section class="event-host">
+    <section class="section event-host">
       <h3>Host Club / Organization</h3>
-      <div class="host-tags">
-        <span class="tag">UMES</span>
-        <span class="tag">Co-op/IIP</span>
+
+      <div class="host-cards">
+        <div class="host-card">
+          <span>UMES</span>
+        </div>
+
+        <div class="host-card">
+          <span>Co-op/IIP</span>
+        </div>
       </div>
     </section>
+
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const EVENT = {
+        title: "Monday Night H.I.R.E.D",
+        startLocal: "2025-10-20T17:30:00-05:00",
+        endLocal: "2025-10-20T18:30:00-05:00",
+        timeZone: "America/Winnipeg",
+        location: "E2-110 EITC, University of Manitoba",
+        details: "Smith and Anderson is a leading Canadian consulting engineering firm..."
+      };
+      initAddToCalendar(EVENT);
+    });
+  </script>
 </body>
 
 </html>

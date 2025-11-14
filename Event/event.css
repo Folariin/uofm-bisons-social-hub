@@ -1,149 +1,208 @@
-:root{
-  --ink:#111;
-  --bg:#fff;
-  --nav-bg:#250d09;
-  --border:#000;
+:root {
+  --ink: #111;
+  --bg: #fff;
+  --nav-bg: #250d09;
+  --border: #000;
 }
 
-*{box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
-body{
-  margin:0;
-  font-family:"Poppins", Arial, sans-serif;
-  color:var(--ink);
-  background:var(--bg);
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
 }
 
 /* === LEFT NAV === */
-nav{
-  position:fixed;
-  inset:0 auto 0 0;          /* top:0; right:auto; bottom:0; left:0 */
-  width:90px;
-  background:var(--nav-bg);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  z-index:100;
-  padding-top:12px;
+nav {
+  position: fixed;
+  inset: 0 auto 0 0; /* top:0; right:auto; bottom:0; left:0 */
+  width: 90px;
+  background: var(--nav-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  padding-top: 12px;
 }
 
-nav a.logo img{
-  width:60px;                 /* don’t overfill the column */
-  height:auto;
-  margin:8px 0 16px;
+nav a.logo img {
+  width: 60px; /* don’t overfill the column */
+  height: auto;
+  margin: 8px 0 16px;
 }
 
-nav .itemScroll{
-  width:100%;
-  overflow-y:auto;
-  scrollbar-width:thin;      
-}
-
-nav .itemScroll a{
-  display:block;
-  text-decoration:none;
-  color:#fff;
-  text-align:center;
-  padding:12px 6px;
-  font-size:12px;
-  line-height:1.1;
-  transition:transform .2s, background-color .2s;
-}
-
-nav .itemScroll a:hover{
-  background:#3a221e;
-  transform:translateY(-2px);
-}
-
-nav .itemScroll a img{
-  display:block;
-  width:30px;
-  height:30px;
-  margin:0 auto 6px;
-}
-
-.event-image-box{
-  aspect-ratio: 4 / 3;     /* always 4:3, no jumping */
-  max-width: 360px;
+nav .itemScroll {
   width: 100%;
-  border: 2px solid #000;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 2px 2px 0 #000;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
-.event-image-box img{
+nav .itemScroll a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  padding: 12px 6px;
+  font-size: 12px;
+  line-height: 1.1;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+nav .itemScroll a:hover {
+  background: #3a221e;
+  transform: translateY(-2px);
+}
+
+nav .itemScroll a img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 6px;
+}
+
+.event-image-box {
+  width: 100%;
+  max-width: 670px; /* big, like the screenshot */
+  aspect-ratio: 16 / 9; /* wide banner look */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+.event-image-box img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
-  object-fit: cover;       /* crop edges nicely */
 }
 
+/* widen the left column */
+.event-header {
+  display: grid;
+  grid-template-columns: min(62vw, 720px) 1fr;
+  gap: 28px;
+  align-items: start;
+}
 
-.event-content{
+.event-content {
   /* make room for fixed nav */
-  margin-left:90px;
-  padding:40px 32px;
-  min-height:100vh;
+  margin-left: 90px;
+  padding: 40px 32px;
+  min-height: 100vh;
 }
 
-.event-header{
-  display:grid;
-  grid-template-columns: min(34vw, 360px) 1fr; /* responsive left column */
-  gap: 2.5rem;
-  align-items: center;
+/* detail rows (icon column + text column) */
+.detail {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 16px 20px;
+  align-items: start;
+  margin: 50px 0;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-top: 2px;
 }
 
-
-
-.event-info h2{
-  margin:0 0 8px 0;
+.event-info h2 {
+  margin-top: 20px; /* pushes it down more */
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+.detail h4 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.detail p {
+  margin: 0;
+  color: #222;
 }
 
-.event-info p{
-  margin:6px 0;
-  font-size:1rem;
+.add-to {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+.add-link {
+  color: #0b57d0;
+  text-decoration: underline;
+}
+.add-link:hover {
+  text-decoration: none;
+}
+
+/*helps to add lines to demarcate*/
+.section {
+  padding-top: 20px;
+  margin-top: 32px;
+  border-top: 1px solid #250d09; /* change to #ddd or #eee if you want lighter */
+}
+
+/* make the very first section NOT have a line */
+.section:first-of-type {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.event-info p {
+  margin: 6px 0;
+  font-size: 1rem;
 }
 
 .event-description,
-.event-host{
-  margin-top:24px;
+.event-host {
+  margin-top: 24px;
 }
 
-.event-description h3,
-.event-host h3{
-  margin:0 0 8px 0;
-}
-
-.event-description{
-  max-width: 65ch;          /* ~65 characters per line = comfy */
+.event-description {
   margin-top: 28px;
+  padding-top: 18px;
+  max-width: 70ch; /* comfortable reading width */
 }
-
-.event-description p{
+.event-description h3 {
+  margin: 0 0 10px;
+}
+.event-description p {
+  margin: 10px 0 0;
   font-size: 1.06rem;
   line-height: 1.6;
   color: #333;
-  margin: 10px 0 0;
 }
 
-.host-tags{
-  display:flex;
-  gap:10px;
-  margin-top:6px;
+
+/*This is for the host clubs and orgs*/
+/* Container for multiple cards */
+.host-cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  margin-top: 12px;
 }
 
-.tag{
-  border:2px solid var(--border);
-  padding:6px 12px;
-  font-weight:700;
-  border-radius:4px;
+/* Each card */
+.host-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
 }
 
-/* === makes it work on a phone === */
-@media (max-width:640px){
-  nav{ width:70px; }
-  .event-content{ margin-left:70px; padding:28px 20px; }
-  nav .itemScroll a img{ width:28px; height:28px; }
-  nav .itemScroll a{ font-size:11px; padding:10px 4px; }
+/* Hover effect */
+.host-card:hover {
+  transform: translateY(-3px);
+  border-color: #bbb;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  background: #4b9ec8;
 }
