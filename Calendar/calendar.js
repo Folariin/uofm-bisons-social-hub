@@ -1,3 +1,13 @@
+/* Navigation sidebar */
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
+
+// Toggle sidebar on hamburger click
+hamburger.onclick = () => {
+  sidebar.classList.toggle("closed");
+};
+
+
 /*
 This part of the code makes the calendar.
 You can add an event using the same format as in the events array
@@ -5,6 +15,7 @@ You can add an event using the same format as in the events array
 document.addEventListener('DOMContentLoaded', function () {
   const calendarEl = document.getElementById('calendar');
 
+  
   //const filterSelect = document.getElementById("eventFilter");
   let currentFilter = "all";
 
@@ -14,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
     headerToolbar: {
       left: 'filterButton',
       center: 'title',
-      //center: 'filterButton',
       right: 'prev,next'
     },
     //  customButtons: {
@@ -36,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         start: '2025-11-17',
         end: '2025-11-17',
         url: '../Event/event.html',
-        category: "holiday"
+        category: "career"
       }
     ],
 
@@ -47,39 +57,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (currentFilter !== "all" && eventCategory !== currentFilter) {
         info.el.style.display = "none";
-      }
-      else {
+      } else {
         info.el.style.display = "";
-
       }
     }
   });
 
   calendar.render();
 
-  //
-
   // Find the custom button element FullCalendar created
   const filterButtonEl = document.querySelector('.fc-filterButton-button');
 
-  // Replace button content with a styled dropdown
-  // filterButtonEl.innerHTML = `
-  //   <select id="toolbarFilter" style="
-  //     border: none;
-  //     background: transparent;
-  //     color: inherit;
-  //     font-size: 1rem;
-  //     font-family: inherit;
-  //     cursor: pointer;
-  //   ">
-  //     <option style="color:black;" value="all">Filter</option>
-  //     <option style="color:black;"value="career">Careers</option>
-  //     <option style="color:black;"value="holiday">Holidays</option>
-  //     <option style="color:black;"value="class">Classes</option>
-  //   </select>
-  // `;
-
-  // Replace button content with a dropdown and a class
+  // Replace the placeholder button with a styled dropdown
   filterButtonEl.innerHTML = `
     <select id="toolbarFilter" class="fc-filter-dropdown">
       <option value="all">Filter</option>
@@ -88,15 +77,16 @@ document.addEventListener('DOMContentLoaded', function () {
       <option value="class">Classes</option>
     </select>
   `;
-  // Add event listener to filter events
+  
+  // Add event listener to filter events dynamically
   const toolbarFilter = document.getElementById('toolbarFilter');
   toolbarFilter.addEventListener('change', function () {
     currentFilter = this.value;
 
+    // Use setProp('display') to filter dynamically
     calendar.getEvents().forEach(event => {
       const category = event.extendedProps.category;
       event.setProp('display', (currentFilter === 'all' || category === currentFilter) ? 'auto' : 'none');
     });
   });
-
 });
