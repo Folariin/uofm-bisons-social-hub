@@ -72,9 +72,13 @@ document.addEventListener('DOMContentLoaded', function () {
   filterButtonEl.innerHTML = `
     <select id="toolbarFilter" class="fc-filter-dropdown">
       <option value="all">Filter</option>
+      <option value="academic">Academic</option>
       <option value="career">Careers</option>
-      <option value="holiday">Holidays</option>
-      <option value="class">Classes</option>
+      <option value="community">Community</option>
+      <option value="entertainment">Entertainment</option>
+      <option value="social">Social</option>
+      <option value="sports">Sports</option>
+      <option value="clubs">UMSU Clubs</option>
     </select>
   `;
   
