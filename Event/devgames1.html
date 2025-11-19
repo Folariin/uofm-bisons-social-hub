@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Page</title>
+    <link rel="stylesheet" href="event.css">
+    <script src="event.js" defer></script>
+</head>
+
+<body>
+
+    <div id="topbar">
+        <img id="hamburger" src="images/hamburger.png" alt="Menu" />
+        <a href="../Homepage/homepage.html" id="logo"> <span class="bigger-text">UoM</span> Bisons Hub</a>
+    </div>
+
+    <div id="sidebar" class="closed">
+        <a href="../Homepage/homepage.html" class="nav-item">
+            <img src="images/home.png" alt="Home Icon" />
+            <span>Home</span>
+        </a>
+        <a href="../Calendar/calendar.html" class="nav-item">
+            <img src="images/calendar.png" alt="Calendar Icon" />
+            <span>Calendar</span>
+        </a>
+        <a href="#clubs" class="nav-item">
+            <img src="images/clubs.png" alt="Clubs Icon" />
+            <span>Clubs and Organizations</span>
+        </a>
+        <a href="#events" class="nav-item">
+            <img src="images/events.png" alt="Events Icon" />
+            <span>Social Events</span>
+        </a>
+    </div>
+
+    <!-- Main content -->
+    <div id="content">
+        <main class="event-content">
+            <section class="section event-header">
+                <div class="event-image-box">
+                    <img src="career-fair.jpg" alt="Students networking with companies at a career fair">
+                </div>
+
+                <div class="event-info">
+                    <h2>.DEV GAMES Level #1: Setting up Unity</h2>
+
+                    <!-- Date & Time row -->
+                    <div class="detail">
+                        <img class="icon" src="calendar-bw.png" alt="">
+                        <div>
+                            <h4>Date and Time</h4>
+                            <p id="when-line-1">Thursday, September 25 2025 at 5:00 PM CST</p>
+                            <p id="when-line-2">Thursday, September 25 2025 at 7:00 PM CST</p>
+
+                            <div class="add-to">
+                                Add to
+                                <a class="add-to-gcal add-link" target="_blank" rel="noopener">Google Calendar</a>
+                                |
+                                <a class="add-to-ics add-link" download="Monday_Night_HIRED.ics">iCal/Outlook</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location row -->
+                    <div class="detail">
+                        <img class="icon" src="location.png" alt="">
+                        <div>
+                            <h4>Location</h4>
+                            <p>
+                                <a href="https://www.google.com/maps?q=E2-155+EITC,+University+of+Manitoba"
+                                    target="_blank" rel="noopener">E2-155 EITC</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section event-description">
+                <h2>Description</h2>
+                <p>
+                    .DEV GAMES is a workshop hosted by .devClub. This first workshop in a series called
+                    "Level up with .devCLub" will help you set up your own Unity account! Unity is a development
+                    platform that people commonly use to make games. Come to this event if you are interested
+                    in taking part in a series of workshops to level up your gaming skills!
+                </p>
+            </section>
+
+            <section class="section event-host">
+                <h3>Host Club / Organization</h3>
+
+                <div class="host-cards">
+                    <div class="host-card">
+                        <span>.devClub</span>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const EVENT = {
+                title: "Monday Night H.I.R.E.D",
+                startLocal: "2025-10-20T17:30:00-05:00",
+                endLocal: "2025-10-20T18:30:00-05:00",
+                timeZone: "America/Winnipeg",
+                location: "E2-110 EITC, University of Manitoba",
+                details: "Smith and Anderson is a leading Canadian consulting engineering firm..."
+            };
+            initAddToCalendar(EVENT);
+        });
+    </script>
+</body>
+
+</html>

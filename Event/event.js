@@ -53,3 +53,11 @@ function initAddToCalendar(eventData) {
 }
 
 
+/* Navigation sidebar */
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
+
+// Toggle sidebar on hamburger click
+hamburger.onclick = () => {
+  sidebar.classList.toggle("closed");
+};

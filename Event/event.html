@@ -11,16 +11,32 @@
 
 <body>
 
-  <nav>
-    <a href="../Calendar/index.html" class="logo"><img src="logo.png" /></a>
-    <div class="itemScroll">
-      <a href="../Calendar/index.html"><img src="logo.png" />Home</a>
-      <a href="../Calendar/calendar.html"><img src="calendar.png" />Calendar</a>
-      <a href="#clubs"><img src="clubs.png" />Clubs and Orgs</a>
-      <a href="#contact"><img src="events.png" />Social Events</a>
-    </div>
-  </nav>
+  <div id="topbar">
+  <img id="hamburger" src="images/hamburger.png" alt="Menu"/>
+  <a href="../Homepage/homepage.html" id="logo"> <span class="bigger-text">UoM</span> Bisons Hub</a>
+</div>
+
+<div id="sidebar" class="closed">
+  <a href="../Homepage/homepage.html" class="nav-item">
+      <img src="images/home.png" alt="Home Icon" />
+      <span>Home</span>
+  </a>
+  <a href="../Calendar/calendar.html" class="nav-item"> 
+      <img src="images/calendar.png" alt="Calendar Icon" />
+      <span>Calendar</span>
+  </a>
+  <a href="#clubs" class="nav-item">
+      <img src="images/clubs.png" alt="Clubs Icon" />
+      <span>Clubs and Organizations</span>
+  </a>
+  <a href="#events" class="nav-item">
+      <img src="images/events.png" alt="Events Icon" />
+      <span>Social Events</span>
+  </a>
+</div>
+
   <!-- Main content -->
+   <div id="content">
   <main class="event-content">
     <section class="section event-header">
       <div class="event-image-box">
@@ -86,7 +102,7 @@
     </section>
 
   </main>
-
+  </div>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const EVENT = {
