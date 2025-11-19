@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Page</title>
+    <link rel="stylesheet" href="event.css">
+    <script src="event.js" defer></script>
+</head>
+
+<body>
+
+    <div id="topbar">
+        <img id="hamburger" src="images/hamburger.png" alt="Menu" />
+        <a href="../Homepage/homepage.html" id="logo">
+            <span class="bigger-text">UoM</span> Bisons Hub
+        </a>
+    </div>
+
+    <div id="sidebar" class="closed">
+        <a href="../Homepage/homepage.html" class="nav-item">
+            <img src="images/home.png" alt="Home Icon" />
+            <span>Home</span>
+        </a>
+        <a href="../Calendar/calendar.html" class="nav-item">
+            <img src="images/calendar.png" alt="Calendar Icon" />
+            <span>Calendar</span>
+        </a>
+        <a href="#clubs" class="nav-item">
+            <img src="images/clubs.png" alt="Clubs Icon" />
+            <span>Clubs and Organizations</span>
+        </a>
+        <a href="#events" class="nav-item">
+            <img src="images/events.png" alt="Events Icon" />
+            <span>Social Events</span>
+        </a>
+    </div>
+
+    <!-- Main content -->
+    <div id="content">
+        <main class="event-content">
+            <section class="section event-header">
+                <div class="event-image-box">
+                    <!-- update the src to your real concert image file -->
+                    <img src="event-images/um-orchestra.png" alt="UM Symphony Orchestra concert">
+                </div>
+
+                <div class="event-info">
+                    <h2>UM Symphony Orchestra – Come Away, Death</h2>
+
+                    <!-- Date & Time row -->
+                    <div class="detail">
+                        <img class="icon" src="calendar-bw.png" alt="">
+                        <div>
+                            <h4>Date and Time</h4>
+                            <p id="when-line-1">Tuesday, November 25 2025 at 7:30 PM CST</p>
+                            <p id="when-line-2">Tuesday, November 25 2025 at 9:30 PM CST</p>
+
+                            <div class="add-to">
+                                Add to
+                                <a class="add-to-gcal add-link" target="_blank" rel="noopener">Google Calendar</a>
+                                |
+                                <a class="add-to-ics add-link" download="UMSO_Come_Away_Death.ics">iCal/Outlook</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location row -->
+                    <div class="detail">
+                        <img class="icon" src="location.png" alt="">
+                        <div>
+                            <h4>Location</h4>
+                            <p>
+                                <a href="https://maps.app.goo.gl/HyBSNjWBM5ahUQYw6" target="_blank" rel="noopener">
+                                    Desautels Concert Hall, 150 Dafoe Road
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section event-description">
+                <h2>Description</h2>
+                <p>
+                    Join the University of Manitoba Symphony Orchestra (UMSO) for another exciting season of
+                    dynamic musical programming, featuring symphonic masterpieces alongside bold contemporary
+                    composers. <em>Come Away, Death</em> showcases the ensemble in an evening of rich orchestral
+                    colour, emotional depth, and adventurous repertoire.
+                </p>
+            </section>
+
+            <section class="section event-host">
+                <h3>Host Club / Organization</h3>
+
+                <div class="host-cards">
+                    <div class="host-card">
+                        <span>Desautels Faculty of Music (DFOM)</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const EVENT = {
+                title: "UM Symphony Orchestra – Come Away, Death",
+                startLocal: "2025-11-25T19:30:00-06:00",
+                endLocal: "2025-11-25T21:30:00-06:00",
+                timeZone: "America/Winnipeg",
+                location: "Desautels Concert Hall, 150 Dafoe Road",
+                details: "Join the University of Manitoba Symphony Orchestra (UMSO) for another exciting season of dynamic musical programming, featuring symphonic masterpieces alongside bold contemporary composers."
+            };
+            initAddToCalendar(EVENT);
+        });
+    </script>
+</body>
+
+</html>

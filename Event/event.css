@@ -238,6 +238,25 @@ body {
   color: #333;
 }
 
+.event-description-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.event-description-list li {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.event-description-list li strong {
+  font-weight: 600;
+}
+
 
 /*This is for the host clubs and orgs*/
 /* Container for multiple cards */
