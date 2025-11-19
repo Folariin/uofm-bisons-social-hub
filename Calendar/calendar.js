@@ -53,11 +53,89 @@ document.addEventListener('DOMContentLoaded', function () {
         category: "career"
       },
       {
-        title: 'Monday Night Hired',
+        title: 'Aerospace Monday Night Hired',
         start: '2025-11-17',
         end: '2025-11-17',
         url: '../Event/event.html',
+        category: "career"
+      },
+      {
+        title: 'KGS Monday Night Hired',
+        start: '2025-10-27',
+        end: '2025-10-27',
+        url: '../Event/event.html',
+        category: "career"
+      },
+      {
+        title: 'Networking Night',
+        start: '2025-11-19',
+        end: '2025-11-19',
+        url: '../Event/event.html',
         category: "academic"
+      },
+      {
+        title: 'Pave Your Path',
+        start: '2025-11-25',
+        end: '2025-11-25',
+        url: '../Event/event.html',
+        category: "academic"
+      },
+      {
+        title: 'Actuary Panel',
+        start: '2025-11-18',
+        end: '2025-11-18',
+        url: '../Event/event.html',
+        category: "academic"
+      },
+      {
+        title: '.dev Games 1',
+        start: '2025-09-25',
+        end: '2025-09-25',
+        url: '../Event/event.html',
+        category: "clubs"
+      },
+      {
+        title: '.dev Games 2',
+        start: '2025-10-01',
+        end: '2025-10-01',
+        url: '../Event/event.html',
+        category: "clubs"
+      }
+      ,
+      {
+        title: '.dev Games 3',
+        start: '2025-11-20',
+        end: '2025-11-20',
+        url: '../Event/event.html',
+        category: "clubs"
+      },
+      {
+        title: 'Path to Medical School',
+        start: '2025-11-18',
+        end: '2025-11-18',
+        url: '../Event/event.html',
+        category: "clubs"
+      },
+      {
+        title: 'Research Week',
+        start: '2025-11-06',
+        end: '2025-11-06',
+        url: '../Event/event.html',
+        category: "clubs"
+      },
+      {
+        title: 'Chess Tournament',
+        start: '2025-11-22',
+        end: '2025-11-22',
+        url: '../Event/event.html',
+        category: "clubs"
+      },
+      {
+        title: 'Actuary Karaoke Night',
+        start: '2025-11-13',
+        end: '2025-11-13',
+        url: '../Event/event.html',
+        category: "clubs"
       }
     ],
 
