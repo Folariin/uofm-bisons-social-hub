@@ -15,12 +15,16 @@ You can add an event using the same format as in the events array
 document.addEventListener('DOMContentLoaded', function () {
   const calendarEl = document.getElementById('calendar');
 
-  
+
   //const filterSelect = document.getElementById("eventFilter");
   let currentFilter = "all";
 
   const calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
+
+    eventClassNames: function (info) {
+      return ['cat-' + info.event.extendedProps.category];
+    },
 
     headerToolbar: {
       left: 'filterButton',
@@ -47,6 +51,13 @@ document.addEventListener('DOMContentLoaded', function () {
         end: '2025-11-17',
         url: '../Event/event.html',
         category: "career"
+      },
+      {
+        title: 'Monday Night Hired',
+        start: '2025-11-17',
+        end: '2025-11-17',
+        url: '../Event/event.html',
+        category: "academic"
       }
     ],
 
@@ -81,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <option value="clubs">UMSU Clubs</option>
     </select>
   `;
-  
+
   // Add event listener to filter events dynamically
   const toolbarFilter = document.getElementById('toolbarFilter');
   toolbarFilter.addEventListener('change', function () {

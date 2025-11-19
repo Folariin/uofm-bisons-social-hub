@@ -168,3 +168,65 @@ body {
   color: black;             /* dropdown text */
   padding: 2px 5px;
 }
+/* .cat-career{
+  color: blueviolet;
+}
+
+.cat-career.fc-daygrid-event {
+  color: blueviolet;
+}
+
+.event.category.career{
+  color: blueviolet;
+}  */
+
+/* --- Event Styling for FullCalendar --- */
+
+/* Academic calendar colour */
+.fc-event.cat-academic {
+  background-color: #f6785e; /* Purple */
+  border-color: #f6785e;
+  color: white;
+}
+
+/* Career calendar colour */
+.fc-event.cat-career {
+  background-color: #9acee7; 
+  border-color: #9acee7; 
+  color: white; 
+}
+
+/* Community calendar colour */
+.fc-event.cat-community {
+  background-color: #fbdc7d; 
+  border-color: #fbdc7d;
+  color: white;
+}
+
+/* Entertainment calendar colour */
+.fc-event.cat-entertainment {
+  background-color: #bfa948; 
+  border-color: #bfa948;
+  color: white;
+}
+
+/* Social calendar colour */
+.fc-event.cat-social {
+  background-color: #513d1f; 
+  border-color: #513d1f;
+  color: white;
+}
+
+/* Sports calendar colour */
+.fc-event.cat-sports {
+  background-color: #af9f8a; 
+  border-color: #af9f8a;
+  color: white;
+}
+
+/* Clubs calendar colour */
+.fc-event.cat-clubs {
+  background-color: #042862; 
+  border-color: #042862;
+  color: white;
+}
