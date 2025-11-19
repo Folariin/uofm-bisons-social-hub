@@ -1,7 +1,17 @@
+<<<<<<< HEAD
+body{
+  background-image: url('Illustration.jpg');
+  /*background-size: cover;
+=======
 body {
   background-image: url("Images/Background.png");
   background-size: cover;
+>>>>>>> ad588cd82eb575a8b4d7b4c93fab7540187d758e
   background-repeat: no-repeat;
+<<<<<<< HEAD
+  background-attachment: static;
+  background-position: center;*/
+=======
   background-attachment: fixed;
   background-position: center;
 
@@ -9,6 +19,7 @@ body {
   min-width: 100vw;
   display: flex;
   flex-direction: column;
+>>>>>>> ad588cd82eb575a8b4d7b4c93fab7540187d758e
 }
 
 .icons {
