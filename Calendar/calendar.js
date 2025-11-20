@@ -91,14 +91,14 @@ document.addEventListener('DOMContentLoaded', function () {
         title: '.dev Games 1',
         start: '2025-09-25',
         end: '2025-09-25',
-        url: '../Event/event.html',
+        url: '../Event/devagmes1.html',
         category: "clubs"
       },
       {
         title: '.dev Games 2',
         start: '2025-10-01',
         end: '2025-10-01',
-        url: '../Event/event.html',
+        url: '../Event/devgames2.html',
         category: "clubs"
       }
       ,
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         title: '.dev Games 3',
         start: '2025-11-20',
         end: '2025-11-20',
-        url: '../Event/event.html',
+        url: '../Event/devgames3.html',
         category: "clubs"
       },
       {
