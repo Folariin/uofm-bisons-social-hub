@@ -39,38 +39,38 @@
     <div id="content">
         <main class="event-content">
             <section class="section event-header">
-                <div class="event-image-box">
-                    <img src="event-images/devclub.jpg" alt="Students attending devClub workshop">
+                <div class="event-image-box umacsoa-img">
+                    <img src="event-images/actuarial-club.jpeg" alt="UMAC x SOA Panel Event">
                 </div>
 
                 <div class="event-info">
-                    <h2>.DEV GAMES Level #1: Setting up Unity</h2>
+                    <h2>UMAC × SOA Panel Event</h2>
 
-                    <!-- Date & Time row -->
+                    <!-- Date & Time -->
                     <div class="detail">
                         <img class="icon" src="calendar-bw.png" alt="">
                         <div>
                             <h4>Date and Time</h4>
-                            <p id="when-line-1">Thursday, September 25 2025 at 5:00 PM CST</p>
-                            <p id="when-line-2">Thursday, September 25 2025 at 7:00 PM CST</p>
+                            <p>Tuesday, November 18th 2025 · 6:00 PM</p>
 
                             <div class="add-to">
                                 Add to
                                 <a class="add-to-gcal add-link" target="_blank" rel="noopener">Google Calendar</a>
                                 |
-                                <a class="add-to-ics add-link" download="Monday_Night_HIRED.ics">iCal/Outlook</a>
+                                <a class="add-to-ics add-link" download="UMAC_SOA_Panel_Event.ics">iCal/Outlook</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Location row -->
+                    <!-- Location -->
                     <div class="detail">
                         <img class="icon" src="location.png" alt="">
                         <div>
                             <h4>Location</h4>
                             <p>
-                                <a href="https://www.google.com/maps?q=E2-155+EITC,+University+of+Manitoba"
-                                    target="_blank" rel="noopener">E2-155 EITC</a>
+                                <a href="https://maps.app.goo.gl/izbwqDqNcC2R24LB9" target="_blank" rel="noopener">
+                                    343 Drake
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -81,10 +81,12 @@
             <section class="section event-description">
                 <h2>Description</h2>
                 <p>
-                    .DEV GAMES is a workshop hosted by .devClub. This first workshop in a series called
-                    "Level up with .devCLub" will help you set up your own Unity account! Unity is a development
-                    platform that people commonly use to make games. Come to this event if you are interested
-                    in taking part in a series of workshops to level up your gaming skills!
+                    UMAC is hosting an upcoming event in partnership with the SOA!  
+                    The event will feature an expert panel of local actuaries here in Winnipeg,  
+                    who will speak on various topics related to the profession.  
+                    <br><br>
+                    Dress code: Business Casual.  
+                    RSVP by Tuesday, Nov. 11.
                 </p>
             </section>
 
@@ -93,23 +95,23 @@
 
                 <div class="host-cards">
                     <div class="host-card">
-                        <span>.devClub</span>
-                    </div>
+                        <span>UMAC</span>
                     </div>
                 </div>
             </section>
 
         </main>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const EVENT = {
-                title: ".DEVGAMES #1",
-                startLocal: "2025-09-25T17:00:00-05:00",
-                endLocal: "2025-09-25T19:00:00-05:00",
+                title: "UMAC × SOA Panel Event",
+                startLocal: "2025-11-18T18:00:00-06:00",
+                endLocal: "2025-11-18T20:00:00-06:00",
                 timeZone: "America/Winnipeg",
-                location: "E2-155 EITC, University of Manitoba",
-                details: "Game development workshop to help you set up Unity"
+                location: "343 Drake",
+                details: "UMAC x SOA panel event featuring local actuaries."
             };
             initAddToCalendar(EVENT);
         });

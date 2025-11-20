@@ -13,7 +13,9 @@
 
     <div id="topbar">
         <img id="hamburger" src="images/hamburger.png" alt="Menu" />
-        <a href="../Homepage/homepage.html" id="logo"> <span class="bigger-text">UoM</span> Bisons Hub</a>
+        <a href="../Homepage/homepage.html" id="logo"> 
+            <span class="bigger-text">UoM</span> Bisons Hub
+        </a>
     </div>
 
     <div id="sidebar" class="closed">
@@ -38,82 +40,89 @@
     <!-- Main content -->
     <div id="content">
         <main class="event-content">
+
+            <!-- HEADER -->
             <section class="section event-header">
-                <div class="event-image-box">
-                    <img src="event-images/devclub.jpg" alt="Students attending devClub workshop">
+                <div class="event-image-box volleyball-img">
+                    <!-- Replace the src with your actual event poster file -->
+                    <img src="event-images/bisons.jpg" 
+                         alt="Bisons Women's Volleyball vs. Regina Cougars">
                 </div>
 
                 <div class="event-info">
-                    <h2>.DEV GAMES Level #1: Setting up Unity</h2>
+                    <h2>Bisons Women's Volleyball vs. Regina Cougars</h2>
 
-                    <!-- Date & Time row -->
+                    <!-- Date & Time -->
                     <div class="detail">
                         <img class="icon" src="calendar-bw.png" alt="">
                         <div>
                             <h4>Date and Time</h4>
-                            <p id="when-line-1">Thursday, September 25 2025 at 5:00 PM CST</p>
-                            <p id="when-line-2">Thursday, September 25 2025 at 7:00 PM CST</p>
+                            <p>Friday, November 22nd 2025 · 4:00 PM</p>
 
                             <div class="add-to">
                                 Add to
-                                <a class="add-to-gcal add-link" target="_blank" rel="noopener">Google Calendar</a>
+                                <a class="add-to-gcal add-link" target="_blank" rel="noopener">
+                                    Google Calendar
+                                </a>
                                 |
-                                <a class="add-to-ics add-link" download="Monday_Night_HIRED.ics">iCal/Outlook</a>
+                                <a class="add-to-ics add-link" download="Bisons_WVB_vs_Regina.ics">
+                                    iCal/Outlook
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Location row -->
+                    <!-- Location -->
                     <div class="detail">
                         <img class="icon" src="location.png" alt="">
                         <div>
                             <h4>Location</h4>
                             <p>
-                                <a href="https://www.google.com/maps?q=E2-155+EITC,+University+of+Manitoba"
-                                    target="_blank" rel="noopener">E2-155 EITC</a>
+                                <a href="https://maps.app.goo.gl/8tt5x3bKSEFws2sf7" 
+                                   target="_blank" rel="noopener">
+                                   Investors Group Athletic Centre (IGAC)
+                                </a>
                             </p>
                         </div>
                     </div>
                 </div>
-
             </section>
 
+            <!-- DESCRIPTION -->
             <section class="section event-description">
                 <h2>Description</h2>
                 <p>
-                    .DEV GAMES is a workshop hosted by .devClub. This first workshop in a series called
-                    "Level up with .devCLub" will help you set up your own Unity account! Unity is a development
-                    platform that people commonly use to make games. Come to this event if you are interested
-                    in taking part in a series of workshops to level up your gaming skills!
+                    A home Canada West regular season women's volleyball match hosted at the IGAC.
                 </p>
             </section>
 
+            <!-- HOST -->
             <section class="section event-host">
                 <h3>Host Club / Organization</h3>
 
                 <div class="host-cards">
                     <div class="host-card">
-                        <span>.devClub</span>
-                    </div>
+                        <span>Bison Sports / Canada West</span>
                     </div>
                 </div>
             </section>
 
         </main>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const EVENT = {
-                title: ".DEVGAMES #1",
-                startLocal: "2025-09-25T17:00:00-05:00",
-                endLocal: "2025-09-25T19:00:00-05:00",
+                title: "Bisons Women's Volleyball vs. Regina Cougars",
+                startLocal: "2025-11-22T16:00:00-06:00",
+                endLocal:   "2025-11-22T18:00:00-06:00",
                 timeZone: "America/Winnipeg",
-                location: "E2-155 EITC, University of Manitoba",
-                details: "Game development workshop to help you set up Unity"
+                location: "Investors Group Athletic Centre (IGAC)",
+                details: "A home Canada West regular season women's volleyball match in the IGAC."
             };
             initAddToCalendar(EVENT);
         });
     </script>
-</body>
 
+</body>
 </html>
