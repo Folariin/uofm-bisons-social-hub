@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Page</title>
+    <link rel="stylesheet" href="event.css">
+    <script src="event.js" defer></script>
+</head>
+
+<body>
+
+    <div id="topbar">
+        <img id="hamburger" src="images/hamburger.png" alt="Menu" />
+        <a href="../Homepage/homepage.html" id="logo"> <span class="bigger-text">UoM</span> Bisons Hub</a>
+    </div>
+
+    <div id="sidebar" class="closed">
+        <a href="../Homepage/homepage.html" class="nav-item">
+            <img src="images/home.png" alt="Home Icon" />
+            <span>Home</span>
+        </a>
+        <a href="../Calendar/calendar.html" class="nav-item">
+            <img src="images/calendar.png" alt="Calendar Icon" />
+            <span>Calendar</span>
+        </a>
+        <a href="#clubs" class="nav-item">
+            <img src="images/clubs.png" alt="Clubs Icon" />
+            <span>Clubs and Organizations</span>
+        </a>
+        <a href="#events" class="nav-item">
+            <img src="images/events.png" alt="Events Icon" />
+            <span>Social Events</span>
+        </a>
+    </div>
+
+    <!-- Main content -->
+    <div id="content">
+        <main class="event-content">
+            <section class="section event-header">
+                <div class="event-image-box">
+                    <img src="/Event/event-images/path-to-med.png" alt="Students attending devClub workshop">
+                </div>
+
+                <div class="event-info">
+                    <h2>Your Path to Medical School</h2>
+
+                    <!-- Date & Time row -->
+                    <div class="detail">
+                        <img class="icon" src="calendar-bw.png" alt="">
+                        <div>
+                            <h4>Date and Time</h4>
+                            <p id="when-line-1">Tuesday, November 18 2025 at 6:00 PM CST</p>
+                            <p id="when-line-2">Tuesday, November 18 2025 at 7:30 PM CST</p>
+
+                            <div class="add-to">
+                                Add to
+                                <a class="add-to-gcal add-link" target="_blank" rel="noopener">Google Calendar</a>
+                                |
+                                <a class="add-to-ics add-link" download="Monday_Night_HIRED.ics">iCal/Outlook</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location row -->
+                    <div class="detail">
+                        <img class="icon" src="location.png" alt="">
+                        <div>
+                            <h4>Location</h4>
+                            <p>
+                                <a href="https://www.google.com/maps/place/Armes+Lecture+Building/@49.8107852,-97.1368543,17z/data=!3m2!4b1!5s0x52ea75e4a2cd1e47:0x3c9bf0b22599f9a7!4m6!3m5!1s0x52ea759e40661ed1:0x52b9074d0030f9d9!8m2!3d49.8107818!4d-97.1342794!16s%2Fg%2F11gxgvlc_l?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank" rel="noopener">Armes 205</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section event-description">
+                <h2>Description</h2>
+                <p>
+                   University of Manitoba Undergraduate Leaders of Healthcare are bringing an 
+                   exciting evening with medical students from the university! Join the event
+                   to hear about the experience as a medical student at the university and gain
+                   insightful tips.
+                </p>
+            </section>
+
+            <section class="section event-host">
+                <h3>Host Club / Organization</h3>
+
+                <div class="host-cards">
+                    <div class="host-card">
+                        <span>UMULH</span>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const EVENT = {
+                title: "Your Path to Medical School",
+                startLocal: "2025-11-18T18:00:00-05:00",
+                endLocal: "2025-11-18T19:30:00-05:00",
+                timeZone: "America/Winnipeg",
+                location: "Armes 205, University of Manitoba",
+                details: "Gain valuable insight from medical students at the University of Manitoba"
+            };
+            initAddToCalendar(EVENT);
+        });
+    </script>
+</body>
+
+</html>
