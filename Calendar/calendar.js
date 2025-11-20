@@ -51,13 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
         category: "career",
       },
       {
-        title: "Aerospace Monday Night Hired",
-        start: "2025-11-17",
-        end: "2025-11-17",
-        url: "../Event/monday-night-hired-two.html",
-        category: "career",
-      },
-      {
         title: "KGS Monday Night Hired",
         start: "2025-10-27",
         end: "2025-10-27",
@@ -70,6 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
         end: "2025-11-19",
         url: "../Event/networking-night.html",
         category: "academic",
+      },
+      {
+        title: "Bisons Women's Volleyball",
+        start: "2025-11-22",
+        end: "2025-11-22",
+        url: "../Event/volleyball-game.html",
+        category: "sports",
       },
       {
         title: "Pave Your Path",
