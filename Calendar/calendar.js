@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
         title: '.dev Games 1',
         start: '2025-09-25',
         end: '2025-09-25',
-        url: '../Event/devagmes1.html',
+        url: '../Event/devgames1.html',
         category: "clubs"
       },
       {
@@ -113,28 +113,14 @@ document.addEventListener('DOMContentLoaded', function () {
         title: 'Path to Medical School',
         start: '2025-11-18',
         end: '2025-11-18',
-        url: '../Event/event.html',
+        url: '../Event/path-to-med.html',
         category: "clubs"
       },
       {
-        title: 'Research Week',
-        start: '2025-11-06',
-        end: '2025-11-06',
-        url: '../Event/event.html',
-        category: "clubs"
-      },
-      {
-        title: 'Chess Tournament',
-        start: '2025-11-22',
-        end: '2025-11-22',
-        url: '../Event/event.html',
-        category: "clubs"
-      },
-      {
-        title: 'Actuary Karaoke Night',
+        title: 'Actuarial Karaoke Night',
         start: '2025-11-13',
         end: '2025-11-13',
-        url: '../Event/event.html',
+        url: '../Event/umac.html',
         category: "clubs"
       }
     ],
