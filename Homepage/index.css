@@ -4,10 +4,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-
   margin: 0;
   padding: 0;
-
   min-height: 100vh;
   min-width: 100vw;
   overflow: hidden;
@@ -15,42 +13,36 @@ body {
 
 .bison-grid {
   position: absolute;
-  bottom: 5%; /* adjust to move whole row up/down */
+  bottom: 3%;
   width: 100%;
   display: grid;
-
-  /* 4 columns total: 2 bisons + large gap + 2 bisons */
   grid-template-columns:
-    0.8fr /* left bison 1 */
-    0.8fr /* left bison 2 */
-    2fr /* BIG middle gap */
-    0.8fr /* right bison 1 */
-    0.8fr; /* right bison 2 */
-
+    0.8fr
+    0.8fr
+    2fr
+    0.8fr
+    0.8fr;
   align-items: end;
   text-align: center;
 }
 
-/* Each image + label */
 .bison-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  height: 100%;
 }
 
 .bison-img {
-  width: 20vw; /* bigger than before */
+  width: 20vw;
   height: auto;
-
   cursor: pointer;
   transition: transform 0.3s ease;
-
-  /* keep it contained visually but allow overflow */
   display: block;
   margin: 0 auto;
-
-  position: relative; /* allow moving without affecting label */
-  top: 80px; /* moves the bison down by 20px */
+  position: relative;
+  top: 80px;
 }
 
 #calendar-bison {
@@ -60,7 +52,7 @@ body {
 
 #clubs-bison {
   position: relative;
-  top: 90px;
+  top: 100px;
 }
 #social-bison {
   position: relative;
@@ -76,11 +68,12 @@ body {
   filter: brightness(1.1);
 }
 
-/* Labels */
 .bison-label {
-  margin-top: 8px;
-  font-size: 20px;
-  font-weight: 600;
-  color: white;
-  text-shadow: 0 0 6px black;
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7), 0 0 12px rgba(255, 255, 255, 0.3);
+  letter-spacing: 1px;
 }
