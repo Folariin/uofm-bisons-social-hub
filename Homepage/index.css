@@ -1,4 +1,3 @@
-/* ---------- BODY ---------- */
 body {
   background-image: url("Images/Background.png");
   background-size: cover;
@@ -12,28 +11,69 @@ body {
   overflow: hidden;
 }
 
-/* ---------- GRID CONTAINER ---------- */
 .bison-grid {
   position: absolute;
-  bottom: 2%; /* slightly higher to fit bigger icons */
+  bottom: 4%;
   width: 100%;
   display: grid;
-  grid-template-columns: 0.9fr 0.9fr 2fr 0.9fr 0.9fr; /* slightly wider columns */
-  justify-items: center; /* center each bison in column */
-  align-items: end; /* all icons aligned at bottom */
-  gap: 3vw; /* more spacing for bigger icons */
+  grid-template-columns: 0.9fr 0.9fr 2fr 0.9fr 0.9fr;
+  justify-items: center;
+  align-items: end;
+  gap: 3vw;
   text-align: center;
 }
 
-/* ---------- EACH BISONS ITEM ---------- */
 .bison-item {
   display: flex;
-  flex-direction: column-reverse; /* label above image */
+  flex-direction: column-reverse;
   align-items: center;
-  gap: 12px; /* spacing between label and icon */
+  gap: 3vw;
 }
 
-/* ---------- BISONS IMAGES ---------- */
 .bison-img {
-  width: 40vw; /* much bigger */
-  max-width: 280px; /* prev
+  width: 17vw;
+  max-width: 280px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+}
+
+.bison-item:hover .bison-img {
+  transform: scale(1.18);
+  filter: brightness(1.1);
+}
+
+.bison-label {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  font-family: "Arial", sans-serif;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.bison-item:hover .bison-label {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+#calendar-bison + .bison-label {
+  background-color: #ff69b4; /* pink */
+}
+#clubs-bison + .bison-label {
+  background-color: #32cd32; /* green */
+}
+#social-bison + .bison-label {
+  background-color: #1e90ff; /* blue */
+}
+#search-bison + .bison-label {
+  background-color: #ff4500; /* red */
+}

@@ -3,22 +3,22 @@ window.addEventListener("DOMContentLoaded", function () {
     {
       id: "calendar-bison",
       normal: "Images/bisons/Calendar.png",
-      hover: "Images/bisons_effects/Calendar2.png",
+      hover: "Images/bisons_effects/CalendarHover.png",
     },
     {
       id: "clubs-bison",
-      normal: "Images/bisons/ClubsAndOrgs.png",
-      hover: "Images/bisons_effects/clubAndOrg2.png",
+      normal: "Images/bisons/Clubs.png",
+      hover: "Images/bisons_effects/ClubsHover.png",
     },
     {
       id: "social-bison",
       normal: "Images/bisons/Social.png",
-      hover: "Images/bisons_effects/Social2.png",
+      hover: "Images/bisons_effects/SocialHover.png",
     },
     {
       id: "search-bison",
       normal: "Images/bisons/Search.png",
-      hover: "Images/bisons_effects/search2.png",
+      hover: "Images/bisons_effects/SearchHover.png",
     },
   ];
 
