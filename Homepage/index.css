@@ -1,14 +1,53 @@
+:root {
+  --font: Arial, sans-serif;
+  --sidebar-width-open: 260px;
+  --topbar-height: 60px;
+  --primary-color: #4a90e2; /* Blue */
+}
+
 body {
   background-image: url("Images/Background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   min-width: 100vw;
   overflow: hidden;
+}
+
+/* --- Topbar Styles --- */
+#topbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--topbar-height);
+  background: var(--primary-color);
+  font: Arial, sans-serif;
+  color: white;
+  padding-left: 20px;
+  border-bottom: 1px solid #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#logo {
+  text-decoration: none;
+  font: Arial, sans-serif;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.bigger-text {
+  font-size: 1.5em;
+  margin-right: 2px;
 }
 
 .bison-grid {

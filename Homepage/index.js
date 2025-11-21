@@ -23,19 +23,17 @@ window.addEventListener("DOMContentLoaded", function () {
   ];
 
   icons.forEach(function (icon) {
-    const imgEl = document.getElementById(icon.id); // Get the image element
-    
-    if (imgEl) {
-      const bisonItem = imgEl.closest('.bison-item'); // Get its parent .bison-item div
-      
-      // Attach listeners to the parent div
-      bisonItem.addEventListener("mouseover", function () {
-        imgEl.src = icon.hover; // Change the image source
-      });
+  const imgEl = document.getElementById(icon.id); // Get the image element
 
-      bisonItem.addEventListener("mouseout", function () {
-        imgEl.src = icon.normal; // Revert the image source
-      });
-    }
-  });
+  if (imgEl) {
+    // Attach listeners directly to the image element (imgEl)
+    imgEl.addEventListener("mouseover", function () {
+      imgEl.src = icon.hover; // Change the image source
+    });
+
+    imgEl.addEventListener("mouseout", function () {
+      imgEl.src = icon.normal; // Revert the image source
+    });
+  }
+});
 });
