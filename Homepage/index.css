@@ -1,0 +1,120 @@
+:root {
+  --font: Arial, sans-serif;
+  --sidebar-width-open: 260px;
+  --topbar-height: 60px;
+  --primary-color: #4a90e2; /* Blue */
+}
+
+body {
+  background-image: url("Images/Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+
+/* --- Topbar Styles --- */
+#topbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--topbar-height);
+  background: var(--primary-color);
+  font: Arial, sans-serif;
+  color: white;
+  padding-left: 20px;
+  border-bottom: 1px solid #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#logo {
+  text-decoration: none;
+  font: Arial, sans-serif;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.bigger-text {
+  font-size: 1.5em;
+  margin-right: 2px;
+}
+
+.bison-grid {
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 0.9fr 2fr 0.9fr 0.9fr;
+  justify-items: center;
+  align-items: end;
+  gap: 3vw;
+  text-align: center;
+}
+.bison-grid a{
+  text-decoration: none;
+}
+.bison-item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 3vw;
+}
+
+.bison-img {
+  width: 17vw;
+  max-width: 280px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+}
+
+.bison-item:hover .bison-img {
+  transform: scale(1.18);
+  filter: brightness(1.1);
+}
+
+/*.bison-label {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  font-family: "Arial", sans-serif;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.bison-item:hover .bison-label {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+#calendar-bison + .bison-label {
+  background-color: #ff69b4; /* pink 
+}
+#clubs-bison + .bison-label {
+  background-color: #ff4500; /* orange 
+}
+#social-bison + .bison-label {
+  background-color: #1e90ff; /* blue 
+}
+#search-bison + .bison-label {
+  background-color: rgb(146, 0, 0); /* red 
+}*/

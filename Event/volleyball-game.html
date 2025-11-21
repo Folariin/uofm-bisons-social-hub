@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisons Women's Volleyball</title>
+    <link rel="stylesheet" href="event.css">
+    <script src="event.js" defer></script>
+</head>
+
+<body>
+
+    <div id="topbar">
+        <img id="hamburger" src="images/hamburger.png" alt="Menu" />
+        <a href="../index.html" id="logo"> <span class="bigger-text">UM</span> Bisons Hub</a>
+    </div>
+
+    <div id="sidebar" class="closed">
+        <a href="../index.html" class="nav-item">
+            <img src="images/bison.png" alt="Home Icon" />
+            <span>Home</span>
+        </a>
+        <a href="../Calendar/calendar.html" class="nav-item">
+            <img src="images/calendar.png" alt="Calendar Icon" />
+            <span>Calendar</span>
+        </a>
+        <a href="../Calendar/notImplemented.html" class="nav-item">
+            <img src="images/clubs.png" alt="Clubs Icon" />
+            <span>Clubs and Organizations</span>
+        </a>
+        <a href="../Calendar/notImplemented.html" class="nav-item">
+            <img src="images/events.png" alt="Events Icon" />
+            <span>Social Events</span>
+        </a>
+    </div>
+
+    <!-- Main content -->
+    <div id="content">
+        <nav class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <span>›</span>
+            <a href="../Calendar/calendar.html">Calendar</a>
+            <span>›</span>
+            <span class="current">Bisons Women's Volleyball vs. Regina Cougars</span>
+        </nav>
+        <main class="event-content">
+
+            <!-- HEADER -->
+            <section class="section event-header">
+                <div class="event-image-box volleyball-img">
+                    <img src="event-images/bisons.jpg" alt="Bisons Women's Volleyball vs. Regina Cougars">
+                </div>
+
+                <div class="event-info">
+                    <h2>Bisons Women's Volleyball vs. Regina Cougars</h2>
+
+                    <!-- Date & Time -->
+                    <div class="detail">
+                        <img class="icon" src="calendar-bw.png" alt="">
+                        <div>
+                            <h4>Date and Time</h4>
+                            <p>Friday, November 22nd 2025 · 4:00 PM</p>
+
+                            <div class="add-to">
+                                Add to
+                                <a class="add-to-gcal add-link" target="_blank" rel="noopener">
+                                    Google Calendar
+                                </a>
+                                |
+                                <a class="add-to-ics add-link" download="Bisons_WVB_vs_Regina.ics">
+                                    iCal/Outlook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="detail">
+                        <img class="icon" src="location.png" alt="">
+                        <div>
+                            <h4>Location</h4>
+                            <p>
+                                <a href="https://maps.app.goo.gl/8tt5x3bKSEFws2sf7" target="_blank" rel="noopener">
+                                    Investors Group Athletic Centre (IGAC)
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DESCRIPTION -->
+            <section class="section event-description">
+                <h2>Description</h2>
+                <p>
+                    A home Canada West regular season women's volleyball match hosted at the IGAC.
+                </p>
+            </section>
+
+            <!-- HOST -->
+            <section class="section event-host">
+                <h3>Host Club / Organization</h3>
+                <a href="../Calendar/notImplemented.html", style="text-decoration: none;color: #111;">
+                 <div class="host-cards">
+                    <div class="host-card">
+                        <span>Bison Sports / Canada West</span>
+                    </div>
+                </div>   
+                </a>
+                
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const EVENT = {
+                title: "Bisons Women's Volleyball vs. Regina Cougars",
+                startLocal: "2025-11-22T16:00:00-06:00",
+                endLocal: "2025-11-22T18:00:00-06:00",
+                timeZone: "America/Winnipeg",
+                location: "Investors Group Athletic Centre (IGAC)",
+                details: "A home Canada West regular season women's volleyball match in the IGAC."
+            };
+            initAddToCalendar(EVENT);
+        });
+    </script>
+
+</body>
+
+</html>

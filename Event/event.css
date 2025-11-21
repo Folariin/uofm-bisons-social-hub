@@ -1,0 +1,316 @@
+:root {
+  --ink: #111;
+  --bg: white;
+  --nav-bg: #250d09;
+  --border: #000;
+  --sidebar-width-open: 260px;
+  --topbar-height: 60px;
+  --primary-color: #4A90E2; /* Blue */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- Topbar Styles --- */
+#topbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--topbar-height);
+  background: var(--primary-color);
+  color: white;
+  padding-left: 20px;
+  border-bottom: 1px solid #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+#hamburger {
+  width: 28px;
+  height: 28px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#logo {
+  text-decoration: none;
+  color: white; 
+  font-size: 1.2em; 
+  font-weight: bold; 
+  margin-left: 20px; 
+}
+
+.bigger-text {
+  font-size: 1.5em;
+  margin-right: 2px;
+}
+
+/* --- Sidebar Styles --- */
+#sidebar {
+  width: var(--sidebar-width-open);
+  background: var(--primary-color);
+  height: 100vh;
+  padding-top: var(--topbar-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease, background 0.3s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  z-index: 5;
+  color: white;
+}
+
+#sidebar.closed {
+  width: 80px;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  overflow-x: hidden;
+}
+
+.nav-item:hover {
+  background: lightslategrey;
+}
+
+.nav-item img {
+  width: 70px;
+  height: 70px;
+  margin-right: 18px;
+  flex-shrink: 0;
+}
+#sidebar.closed .nav-item {
+  justify-content: center; 
+  padding: 27px 0;
+}
+
+#sidebar.closed .nav-item img {
+  margin-right: 0; 
+}
+
+#sidebar.closed .nav-item span {
+  display: none; 
+}
+/* Adjust margin when sidebar is open */
+#sidebar:not(.closed) ~ #content {
+    margin-left: var(--sidebar-width-open);
+}
+
+#content {
+    flex-grow: 1;
+    padding-top: var(--topbar-height);
+    transition: margin-left 0.3s ease;
+    min-height: 100vh;
+    box-sizing: border-box; 
+    margin-left: 20px; /* Initial margin based on closed sidebar width */
+    display: flex; 
+    flex-direction: column;
+    color: black; /* Set content text color to be visible */
+}
+.event-image-box {
+  width: 100%;
+  max-width: 670px; /* big, like the screenshot */
+  aspect-ratio: 16 / 9; /* wide banner look */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+}
+.event-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* widen the left column */
+.event-header {
+  display: grid;
+  grid-template-columns: min(62vw, 720px) 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.event-content {
+  /* make room for fixed nav */
+  margin-left: 90px;
+  padding: 40px 32px;
+  min-height: 100vh;
+}
+
+/* detail rows (icon column + text column) */
+.detail {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 16px 20px;
+  align-items: start;
+  margin: 50px 0;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-top: 2px;
+}
+
+.event-info h2 {
+  margin-top: 20px; /* pushes it down more */
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+.detail h4 {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.detail p {
+  margin: 0;
+  color: #222;
+}
+
+.add-to {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+.add-link {
+  color: #0b57d0;
+  text-decoration: underline;
+}
+.add-link:hover {
+  text-decoration: none;
+}
+
+/*helps to add lines to demarcate*/
+.section {
+  padding-top: 20px;
+  margin-top: 32px;
+  border-top: 1px solid #250d09; /* change to #ddd or #eee if you want lighter */
+}
+
+/* make the very first section NOT have a line */
+.section:first-of-type {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.event-info p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+.event-description,
+.event-host {
+  margin-top: 24px;
+}
+
+.event-description {
+  margin-top: 28px;
+  padding-top: 18px;
+  max-width: 70ch; /* comfortable reading width */
+}
+.event-description h3 {
+  margin: 0 0 10px;
+}
+.event-description p {
+  margin: 10px 0 0;
+  font-size: 1.06rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.event-description-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.event-description-list li {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.event-description-list li strong {
+  font-weight: 600;
+}
+
+
+/*This is for the host clubs and orgs*/
+/* Container for multiple cards */
+.host-cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  margin-top: 12px;
+}
+
+/* Each card */
+.host-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.host-card:hover {
+  transform: translateY(-3px);
+  border-color: #bbb;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  background: #4b9ec8;
+}
+
+/* Breadcrumb Bar */
+.breadcrumb {
+  margin-top: 30px;
+  margin-left: 120px;
+  font-size: 0.95rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb a {
+  color: #0b57d0;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .current {
+  color: #222;
+  font-weight: 600;
+}
+
