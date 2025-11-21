@@ -187,15 +187,15 @@ body {
 
 /* Career calendar colour */
 .fc-event.cat-career {
-  background-color: #9acee7;
-  border-color: #9acee7;
+  background-color: #3e7d36;
+  border-color: #3e7d36;
   color: white;
 }
 
 /* Community calendar colour */
 .fc-event.cat-community {
-  background-color: #fbdc7d;
-  border-color: #fbdc7d;
+  background-color: #fb8c00;
+  border-color: #fb8c00;
   color: white;
 }
 
@@ -215,8 +215,8 @@ body {
 
 /* Sports calendar colour */
 .fc-event.cat-sports {
-  background-color: #af9f8a;
-  border-color: #af9f8a;
+  background-color: #9221d9;
+  border-color: #9221d9;
   color: white;
 }
 
