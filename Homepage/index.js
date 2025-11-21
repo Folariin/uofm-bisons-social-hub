@@ -7,8 +7,8 @@ window.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: "clubs-bison",
-      normal: "Images/bisons/Clubs.png",
-      hover: "Images/bisons_effects/ClubsHover.png",
+      normal: "Images/bisons_effects/ClubsHover.png",
+      hover: "Images/bisons/Clubs.png",
     },
     {
       id: "social-bison",
@@ -23,13 +23,18 @@ window.addEventListener("DOMContentLoaded", function () {
   ];
 
   icons.forEach(function (icon) {
-    const el = document.getElementById(icon.id);
-    if (el) {
-      el.addEventListener("mouseover", function () {
-        el.src = icon.hover;
+    const imgEl = document.getElementById(icon.id); // Get the image element
+    
+    if (imgEl) {
+      const bisonItem = imgEl.closest('.bison-item'); // Get its parent .bison-item div
+      
+      // Attach listeners to the parent div
+      bisonItem.addEventListener("mouseover", function () {
+        imgEl.src = icon.hover; // Change the image source
       });
-      el.addEventListener("mouseout", function () {
-        el.src = icon.normal;
+
+      bisonItem.addEventListener("mouseout", function () {
+        imgEl.src = icon.normal; // Revert the image source
       });
     }
   });

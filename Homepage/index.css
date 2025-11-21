@@ -22,7 +22,9 @@ body {
   gap: 3vw;
   text-align: center;
 }
-
+.bison-grid a{
+  text-decoration: none;
+}
 .bison-item {
   display: flex;
   flex-direction: column-reverse;
@@ -69,11 +71,11 @@ body {
   background-color: #ff69b4; /* pink */
 }
 #clubs-bison + .bison-label {
-  background-color: #32cd32; /* green */
+  background-color: #ff4500; /* orange */
 }
 #social-bison + .bison-label {
   background-color: #1e90ff; /* blue */
 }
 #search-bison + .bison-label {
-  background-color: #ff4500; /* red */
+  background-color: rgb(146, 0, 0); /* red */
 }
