@@ -49,7 +49,7 @@ body {
   filter: brightness(1.1);
 }
 
-.bison-label {
+/*.bison-label {
   font-size: 24px;
   font-weight: 700;
   padding: 8px 16px;
@@ -68,14 +68,14 @@ body {
 }
 
 #calendar-bison + .bison-label {
-  background-color: #ff69b4; /* pink */
+  background-color: #ff69b4; /* pink 
 }
 #clubs-bison + .bison-label {
-  background-color: #ff4500; /* orange */
+  background-color: #ff4500; /* orange 
 }
 #social-bison + .bison-label {
-  background-color: #1e90ff; /* blue */
+  background-color: #1e90ff; /* blue 
 }
 #search-bison + .bison-label {
-  background-color: rgb(146, 0, 0); /* red */
-}
+  background-color: rgb(146, 0, 0); /* red 
+}*/
