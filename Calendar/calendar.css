@@ -2,7 +2,7 @@
   --font: Arial, sans-serif;
   --sidebar-width-open: 260px;
   --topbar-height: 60px;
-  --primary-color: #4A90E2; /* Blue */
+  --primary-color: #4a90e2; /* Blue */
 }
 
 body {
@@ -38,10 +38,10 @@ body {
 
 #logo {
   text-decoration: none;
-  color: white; 
-  font-size: 1.2em; 
-  font-weight: bold; 
-  margin-left: 20px; 
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .bigger-text {
@@ -94,67 +94,63 @@ body {
 }
 
 #sidebar.closed .nav-item {
-  justify-content: center; 
+  justify-content: center;
   padding: 27px 0;
 }
 
 #sidebar.closed .nav-item img {
-  margin-right: 0; 
+  margin-right: 0;
 }
 
 #sidebar.closed .nav-item span {
-  display: none; 
+  display: none;
 }
 
-
-
 #content {
-    flex-grow: 1;
-    padding-top: var(--topbar-height);
-    transition: margin-left 0.3s ease;
-    min-height: 100vh;
-    box-sizing: border-box; 
-    margin-left: 80px; /* Initial margin based on closed sidebar width */
-    display: flex; 
-    flex-direction: column;
-    color: black; /* Set content text color to be visible */
+  flex-grow: 1;
+  padding-top: var(--topbar-height);
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin-left: 80px; /* Initial margin based on closed sidebar width */
+  display: flex;
+  flex-direction: column;
+  color: black; /* Set content text color to be visible */
 }
 
 /* Adjust margin when sidebar is open */
 #sidebar:not(.closed) ~ #content {
-    margin-left: var(--sidebar-width-open);
+  margin-left: var(--sidebar-width-open);
 }
 
 /* Calendar area */
- .calendar-container {
-   flex: 1;
-   padding: 1rem;
-   box-sizing: border-box;
-   max-height: calc(100vh - var(--topbar-height));
- }
+.calendar-container {
+  flex: 1;
+  padding: 1rem;
+  box-sizing: border-box;
+  max-height: calc(100vh - var(--topbar-height));
+}
 
- #calendar {
-   height: 100%;
- }
+#calendar {
+  height: 100%;
+}
 
- /* Filter function stuff below */
+/* Filter function stuff below */
 
- .filter-container {
-   margin-bottom: 15px;
- }
+.filter-container {
+  margin-bottom: 15px;
+}
 
- 
 /* Optional: hover effect to match FullCalendar buttons */
 /* .fc-filter-dropdown:hover {
   background-color: #f0f0f0;
 } */
 
-
 /* The visible part of the select (the "button") */
 .fc-filter-dropdown {
   border: transparent;
-  background-color: transparent;  /* dark toolbar background */
-  color: white;            /* text on the button is white */
+  background-color: transparent; /* dark toolbar background */
+  color: white; /* text on the button is white */
   font-size: 1rem;
   font-family: inherit;
   padding: 2px 5px;
@@ -164,8 +160,8 @@ body {
 
 /* The dropdown options */
 .fc-filter-dropdown option {
-  background-color: white;  /* dropdown background */
-  color: black;             /* dropdown text */
+  background-color: white; /* dropdown background */
+  color: black; /* dropdown text */
   padding: 2px 5px;
 }
 /* .cat-career{
@@ -191,42 +187,84 @@ body {
 
 /* Career calendar colour */
 .fc-event.cat-career {
-  background-color: #9acee7; 
-  border-color: #9acee7; 
-  color: white; 
+  background-color: #9acee7;
+  border-color: #9acee7;
+  color: white;
 }
 
 /* Community calendar colour */
 .fc-event.cat-community {
-  background-color: #fbdc7d; 
+  background-color: #fbdc7d;
   border-color: #fbdc7d;
   color: white;
 }
 
 /* Entertainment calendar colour */
 .fc-event.cat-entertainment {
-  background-color: #bfa948; 
+  background-color: #bfa948;
   border-color: #bfa948;
   color: white;
 }
 
 /* Social calendar colour */
 .fc-event.cat-social {
-  background-color: #513d1f; 
+  background-color: #513d1f;
   border-color: #513d1f;
   color: white;
 }
 
 /* Sports calendar colour */
 .fc-event.cat-sports {
-  background-color: #af9f8a; 
+  background-color: #af9f8a;
   border-color: #af9f8a;
   color: white;
 }
 
 /* Clubs calendar colour */
 .fc-event.cat-clubs {
-  background-color: #042862; 
+  background-color: #042862;
   border-color: #042862;
   color: white;
+}
+
+.nav-item.active {
+  background: rgb(20, 1, 84); /* darker version of your blue */
+}
+
+.nav-item.active img {
+  filter: brightness(1.2);
+}
+
+.nav-item.active span {
+  font-weight: 900;
+}
+
+/* Breadcrumb bar */
+.breadcrumb {
+  margin-top: 13px; /* small space under topbar */
+  margin-bottom: 10px; /* small space above calendar */
+  margin-left: 20px;
+  font-size: 0.95rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb a {
+  color: #0b57d0;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  color: #888;
+}
+
+.breadcrumb .current {
+  font-weight: 600;
+  color: #111;
 }

@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UoM Bisons Hub - Calendar</title>
-  <link rel="stylesheet" href="calendar.css" /> 
+  <link rel="stylesheet" href="calendar.css" />
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-  
+
 </head>
 
 <body>
 
-<div id="topbar">
-  <img id="hamburger" src="images/hamburger.png" alt="Menu"/>
-  <a href="../Homepage/homepage.html" id="logo"> <span class="bigger-text">UoM</span> Bisons Hub</a>
-</div>
+  <div id="topbar">
+    <img id="hamburger" src="images/hamburger.png" alt="Menu" />
+    <a href="../Homepage/index.html" id="logo"> <span class="bigger-text">UoM</span> Bisons Hub</a>
+  </div>
 
-<div id="sidebar" class="closed">
-  <a href="../Homepage/homepage.html" class="nav-item">
+  <div id="sidebar" class="closed">
+    <a href="../Homepage/index.html" class="nav-item">
       <img src="images/bison.png" alt="Home Icon" />
       <span>Home</span>
-  </a>
-  <a href="../Calendar/calendar.html" class="nav-item"> 
+    </a>
+    <a href="../Calendar/calendar.html" class="nav-item active">
       <img src="images/calendar.png" alt="Calendar Icon" />
       <span>Calendar</span>
-  </a>
-  <a href="../Calendar/notImplemented.html" class="nav-item">
+    </a>
+    <a href="../Calendar/notImplemented.html" class="nav-item">
       <img src="images/clubs.png" alt="Clubs Icon" />
       <span>Clubs and Organizations</span>
-  </a>
-  <a href="../Calendar/notImplemented.html" class="nav-item">
+    </a>
+    <a href="../Calendar/notImplemented.html" class="nav-item">
       <img src="images/events.png" alt="Events Icon" />
       <span>Social Events</span>
-  </a>
-</div>
+    </a>
+  </div>
 
-<div id="content"> 
+  <div id="content">
+    <nav class="breadcrumb">
+      <a href="../Homepage/index.html">Home</a>
+      <span class="separator">›</span>
+      <span class="current">Calendar</span>
+    </nav>
     <div class="calendar-container">
-        <div id="calendar"></div>
+      <div id="calendar"></div>
     </div>
-</div>
+  </div>
 
-<script defer src="calendar.js"></script> 
+  <script defer src="calendar.js"></script>
 </body>
+
 </html>
