@@ -1,3 +1,4 @@
+/* ---------- BODY ---------- */
 body {
   background-image: url("Images/Background.png");
   background-size: cover;
@@ -11,69 +12,28 @@ body {
   overflow: hidden;
 }
 
+/* ---------- GRID CONTAINER ---------- */
 .bison-grid {
   position: absolute;
-  bottom: 3%;
+  bottom: 2%; /* slightly higher to fit bigger icons */
   width: 100%;
   display: grid;
-  grid-template-columns:
-    0.8fr
-    0.8fr
-    2fr
-    0.8fr
-    0.8fr;
-  align-items: end;
+  grid-template-columns: 0.9fr 0.9fr 2fr 0.9fr 0.9fr; /* slightly wider columns */
+  justify-items: center; /* center each bison in column */
+  align-items: end; /* all icons aligned at bottom */
+  gap: 3vw; /* more spacing for bigger icons */
   text-align: center;
 }
 
+/* ---------- EACH BISONS ITEM ---------- */
 .bison-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse; /* label above image */
   align-items: center;
-  justify-content: flex-end;
-  height: 100%;
+  gap: 12px; /* spacing between label and icon */
 }
 
+/* ---------- BISONS IMAGES ---------- */
 .bison-img {
-  width: 20vw;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  top: 80px;
-}
-
-#calendar-bison {
-  position: relative;
-  top: 105px;
-}
-
-#clubs-bison {
-  position: relative;
-  top: 100px;
-}
-#social-bison {
-  position: relative;
-  top: 105px;
-}
-#search-bison {
-  position: relative;
-  top: 75px;
-}
-
-.bison-img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
-}
-
-.bison-label {
-  margin-top: 15px;
-  font-size: 25px;
-  font-weight: 700;
-  color: #ffffff;
-  font-family: "Arial", sans-serif;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7), 0 0 12px rgba(255, 255, 255, 0.3);
-  letter-spacing: 1px;
-}
+  width: 40vw; /* much bigger */
+  max-width: 280px; /* prev
