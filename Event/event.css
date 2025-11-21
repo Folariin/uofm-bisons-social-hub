@@ -287,3 +287,29 @@ body {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
   background: #4b9ec8;
 }
+
+/* Breadcrumb Bar */
+.breadcrumb {
+  margin-top: 30px;
+  margin-left: 120px;
+  font-size: 0.95rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb a {
+  color: #0b57d0;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .current {
+  color: #222;
+  font-weight: 600;
+}
+
