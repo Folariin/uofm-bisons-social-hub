@@ -13,5 +13,5 @@ document.getElementById('goBackButton').addEventListener('click', function() {
 
 
 document.getElementById('homeButton').addEventListener('click', function() {
-    window.location.href = "../Homepage/index.html";
+    window.location.href = "../index.html";
 });

@@ -2,23 +2,23 @@ window.addEventListener("DOMContentLoaded", function () {
   const icons = [
     {
       id: "calendar-bison",
-      normal: "Images/bisons/Calendar.png",
-      hover: "Images/bisons_effects/CalendarHover.png",
+      normal: "Homepage/Images/bisons/Calendar.png",
+      hover: "Homepage/Images/bisons_effects/CalendarHover.png",
     },
     {
       id: "clubs-bison",
-      normal: "Images/bisons_effects/ClubsHover.png",
-      hover: "Images/bisons/Clubs.png",
+      normal: "Homepage/Images/bisons_effects/ClubsHover.png",
+      hover: "Homepage/Images/bisons/Clubs.png",
     },
     {
       id: "social-bison",
-      normal: "Images/bisons/Social.png",
-      hover: "Images/bisons_effects/SocialHover.png",
+      normal: "Homepage/Images/bisons/Social.png",
+      hover: "Homepage/Images/bisons_effects/SocialHover.png",
     },
     {
       id: "search-bison",
-      normal: "Images/bisons/Search.png",
-      hover: "Images/bisons_effects/SearchHover.png",
+      normal: "Homepage/Images/bisons/Search.png",
+      hover: "Homepage/Images/bisons_effects/SearchHover.png",
     },
   ];
 
