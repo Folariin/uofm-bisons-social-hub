@@ -17,3 +17,11 @@ As part of the prototype scope, the following pages were **designed but not impl
 - 🏀 **Clubs & Organizations Page** — Not implemented; currently displays a “Page under development” message.
 
 Each implemented page is built using **HTML, CSS, and JavaScript**, with development done on separate branches for clear organization and collaboration.
+
+### 👥 Contributors
+
+* **Folariin** ([@Folariin](https://github.com/Folariin))
+* **dal-b** ([@dal-b](https://github.com/dal-b))
+* **MHaly17** ([@MHaly17](https://github.com/MHaly17))
+* **DollyAries** ([@DollyAries](https://github.com/DollyAries))
+* **Charlotte Erkau** ([@charlotte-erk](https://github.com/charlotte-erk))
